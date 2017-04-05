@@ -9,11 +9,11 @@ import scala.io.Source
  * that in sum give 0
  */
 object FourSumFast extends App{
-  val million = Source.fromFile("src/main/resources/32Kints.txt")
+  val thirtyTwoK = Source.fromFile("src/main/resources/32Kints.txt")
   .getLines().map(_ toInt).toArray
   
-  val sorted = million.sorted
-  val N = million.length
+  val sorted = thirtyTwoK.sorted
+  val N = thirtyTwoK.length
   
   //counts total occurences of 4 sums
   var counter = 0
