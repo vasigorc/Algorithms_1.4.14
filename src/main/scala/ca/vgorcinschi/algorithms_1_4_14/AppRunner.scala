@@ -13,14 +13,14 @@ object FourSumFast extends App{
   .getLines().map(_ toInt).toArray
   
   val sorted = thirtyTwoK.sorted
-  val N = thirtyTwoK.length
+  val N = sorted.length
   
   //counts total occurences of 4 sums
   var counter = 0
 
   for {
-		i <- 0 until sorted.length-2
-		j <- i+1 until sorted.length-2
+		i <- 0 until N-2
+		j <- i+1 until N-2
 		val k = j+1; val l = k+1;
 		if(sorted(i)+sorted(j) == 0-sorted(k)-sorted(l))
 	} counter+=1
